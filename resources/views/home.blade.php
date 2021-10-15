@@ -14,9 +14,13 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
-                        <a href="{{route('records.index')}}" class="btn btn-success">
-                            <i >Viw</i>
+                    {{ __('перейти на: ') }}
+
+                        <a href="{{route('records.index')}}" class="btn btn-success ">
+                            <i >For admin</i>
+                        </a>
+                        <a href="{{route('forPublic')}}" class="btn btn-success ">
+                            <i>Viw</i>
                         </a>
 
                 </div>

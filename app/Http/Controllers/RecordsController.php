@@ -18,6 +18,12 @@ class RecordsController extends Controller
         return view('records.index', compact('records'));
     }
 
+    public function forPublic()
+    {
+        $records = Records::all();
+        return view('forPublic', compact('records'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

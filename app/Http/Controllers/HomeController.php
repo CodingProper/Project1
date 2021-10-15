@@ -1,4 +1,13 @@
 <?php
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+
+namespace App\Http\Controllers\RecordsController;
+
+use App\Models\Records;
 
 namespace App\Http\Controllers;
 
@@ -25,4 +34,9 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    public function forPublic()
+    {
+        return view('forPublic');
+    }
+
 }
