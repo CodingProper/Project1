@@ -22,12 +22,12 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::group(['middleware' => ['role:admin']], function () {
-    Route::resource('/records.index','App\Http\Controllers\records.index');
+    Route::resource('/records','App\Http\Controllers\RecordsController');
+
 });
 
 Route::get('/forPublic', [App\Http\Controllers\RecordsController::class, 'forPublic'])->name('forPublic');
 
-Route::resource('/records','App\Http\Controllers\RecordsController');
 
 Auth::routes();
 
